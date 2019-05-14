@@ -1,0 +1,14 @@
+**/build
+**/bower_components
+**/vendor
+**/node_modules
+**/dist
+**/local_css
+**/local_js
+**/local
+**/lib
+**/dev
+*.js
+*.jsx
+*.md
+*.html

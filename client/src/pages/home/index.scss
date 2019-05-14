@@ -1,0 +1,31 @@
+.test {
+  color: green;
+  .ji {
+    columns: 3;
+  }
+}
+
+.zent-notify-container {
+  top: 20px;
+}
+
+.label {
+  width: 70px;
+  line-height: 26px;
+  text-align: right;
+}
+
+.input-warpper {
+  width: 80px;
+  margin-right: 10px;
+  height: 26px;
+
+  .zent-input {
+    min-width: 10px;
+  }
+}
+
+.zent-btn {
+  height: 26px;
+  line-height: 26px;
+}

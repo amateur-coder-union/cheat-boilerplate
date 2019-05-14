@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <title>Destiny Child</title>
+    </head>
+    <body style="height: 310px;">
+      <div id="root">loading script...</div>
+
+      <script src="./dist/dll/vendor.dll.js"></script>
+      <script>
+        document.oncontextmenu = function() { return false; }; 
+        document.onselectstart = function() { return false; };
+
+        (async function() {
+          const script_main = document.createElement('script')
+          let env = await window._envFunc();
+          if (env['NODE_ENV'] === 'dev') {
+            script_main.src = 'http://localhost:8207/js/bundle.js'
+          } else {
+            script_main.src = './dist/js/bundle.js'
+          }
+          document.body.append(script_main);
+        }())
+      </script>
+    </body>
+  </html>
