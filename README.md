@@ -17,12 +17,12 @@ yarn build:render [--re-dll] [--dev] # build code. re-dll: rebuild dll, dev: dev
 yarn build
 ```
 
-#### tips
+## tips
 如果修改了dll内容的话记得在执行时带上`--re-dll`  
 打包 `npx pkg -t macos .`  
 
-#### TODO
+## TODO
+[ ] 添加框架性内容 [WIP]
 
-
-#### License
+## License
 Anti-996-License-1.0
