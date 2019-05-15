@@ -1,55 +1,70 @@
 import React, { useState } from 'react';
-import { Button, Notify, Input, Checkbox } from 'zent';
+import { Button, Notify } from 'zent';
+
+import { notification } from '../../utils';
 
 import './index.scss';
 
-function notification(title) {
-  new Notification(title);
+function InitButton() {
+  const [loading, setLoading] = useState(false);
+  const [disable, setDisable] = useState(false);
+  const clickFunc = async () => {
+    try {
+      setLoading(true);
+      const result = await window._init();
+      Notify.success(result);
+      if (result.includes('link')) setDisable(true);
+    } catch (error) {
+      notification(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+  return (
+    <Button onClick={clickFunc} loading={loading} disabled={disable}>
+      初始化
+    </Button>
+  );
 }
 
-function Content() {
-  const [tickets, setTickets] = useState(0);
-  const [increase, setIncrease] = useState(false);
+function ButtonItem(props) {
+  const { name, onClick } = props;
+  const [loading, setLoading] = useState(false);
+  const clickFunc = async () => {
+    try {
+      setLoading(true);
+      const result = await onClick();
+      return result;
+    } catch (error) {
+      notification(error);
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
-    <React.Fragment>
-      <div style={{ display: 'flex', alignItems: 'center', height: 40 }}>
-        <span className={'label'}>tickets：</span>
-        <Input
-          value={tickets}
-          onChange={(e) => setTickets(e.target.value)}
-          className={'input-warpper'}
-        />
-        <Button onClick={() => notification(`开始开车，tickets: ${tickets}`)}>
-          开车
-        </Button>
-      </div>
-      <Checkbox
-        style={{ marginLeft: 70 }}
-        checked={increase}
-        onChange={(e) => setIncrease(e.target.checked)}
-      >
-        开启增幅器
-      </Checkbox>
-    </React.Fragment>
+    <Button onClick={clickFunc} loading={loading}>
+      {name}
+    </Button>
   );
 }
 
 class Home extends React.PureComponent {
-  control = null;
+  fight = null;
 
   onJmpTst = () => {
     const { history } = this.props;
     history && history.push('/page2');
   };
 
-  testLink = async () => {
-    Notify.success(await window._control('123'));
-  };
+  onClickAdvanture = async () => {
+    if (this.fight == null) this.fight = await window._fight_start();
+  }
 
   render() {
     return (
       <div style={{ padding: 20 }}>
-        <Content />
+        <InitButton />
+        <ButtonItem name={'打怪'} onClick={this.onClickAdvanture} />
       </div>
     );
   }

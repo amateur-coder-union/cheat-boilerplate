@@ -1,5 +1,6 @@
-const carlo = require('carlo');
 const path = require('path');
+const carlo = require('carlo');
+const notifier = require('node-notifier');
 
 const mountModule = require('./src');
 const appPath = path.resolve(__dirname, '../static/app.png');
@@ -9,7 +10,7 @@ const appPath = path.resolve(__dirname, '../static/app.png');
     width: 560,
     height: 330,
     icon: appPath,
-    args: [],
+    args: []
   });
 
   app.on('exit', () => process.exit());
@@ -17,8 +18,14 @@ const appPath = path.resolve(__dirname, '../static/app.png');
   app.serveFolder(path.resolve(__dirname, '../static'));
 
   // 挂载模块
-  await mountModule(app);
+  await mountModule(app).catch(e => {
+    notifier.notify({
+      title: 'WDA_CHEAT',
+      message: e.message
+    });
+    console.log(e);
+    process.exit(0);
+  });
 
   await app.load('index.html');
 })();
-

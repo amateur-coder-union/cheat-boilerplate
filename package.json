@@ -9,7 +9,9 @@
     "start": "cross-env NODE_ENV=dev node app/main.js",
     "dev:render": "cd client && yarn dev:render",
     "build:render": "cd client && yarn build:render",
-    "build": "pkg . -t macos --output build/cqHack-app"
+    "build": "pkg . -t macos --output build/cqHack-app",
+    "screenshot": "node scripts/screenshot.js",
+    "getScale": "node scripts/getScale.js"
   },
   "bin": {
     "cqHack-app": "./app/main.js"
@@ -34,7 +36,6 @@
     "babel-eslint": "^10.0.1",
     "cross-env": "^5.2.0",
     "eslint": "^5.8.0",
-    "eslint-config-google": "^0.11.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-lean-imports": "^0.3.3",
     "eslint-plugin-react": "^7.11.1",
@@ -53,6 +54,7 @@
     "@flasco/cheat-core": "git+https://github.com/flasco/cheat-core.git",
     "@flasco/wda-driver": "git+https://github.com/flasco/WDR.git",
     "carlo": "^0.9.45",
+    "node-notifier": "^5.4.0",
     "opencv4nodejs": "^4.16.0"
   },
   "jest": {
