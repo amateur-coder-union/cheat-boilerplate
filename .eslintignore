@@ -9,4 +9,5 @@
 **/lib
 **/dev
 client/scripts
+/scripts
 client/config

@@ -14,7 +14,7 @@ module.exports = {
     _global: false,
     __DEBUG__: false
   },
-  extends: ['eslint:recommended', 'plugin:react/recommended', 'google'],
+  extends: ['eslint:recommended', 'plugin:react/recommended'],
   plugins: ['lean-imports', 'react-hooks'],
   settings: {
     react: {
