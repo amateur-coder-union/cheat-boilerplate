@@ -126,12 +126,12 @@
 
 "@flasco/cheat-core@git+https://github.com/flasco/cheat-core.git":
   version "0.2.1"
-  resolved "git+https://github.com/flasco/cheat-core.git#28a7f82bcb122b31e25aa2cae56d27c6dd2d9f2e"
+  resolved "git+https://github.com/flasco/cheat-core.git#4ab96221f223cd568820cbd88b442b4f01eadbe8"
   dependencies:
     "@flasco/logger" "git+https://github.com/flasco/logger.git"
     colors-cli "^1.0.21"
     date-fns "^1.30.1"
-    opencv4nodejs "^4.15.0"
+    opencv4nodejs "^4.16.0"
 
 "@flasco/logger@git+https://github.com/flasco/logger.git":
   version "0.0.2"
@@ -142,7 +142,7 @@
 
 "@flasco/wda-driver@git+https://github.com/flasco/WDR.git":
   version "0.2.1"
-  resolved "git+https://github.com/flasco/WDR.git#7719343d835944a230a417bf286e89f24b66c262"
+  resolved "git+https://github.com/flasco/WDR.git#93b826fb7f2417db37715f0a401350d3ed83b6f8"
   dependencies:
     axios "^0.18.0"
 

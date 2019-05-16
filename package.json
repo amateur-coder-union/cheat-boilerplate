@@ -10,6 +10,13 @@
     "dev:render": "cd client && yarn dev:render",
     "build:render": "cd client && yarn build:render",
     "build": "pkg . -t macos --output build/cqHack-app",
+    "wda": "sh scripts/test.sh",
+    "prxx": "mobiledevice tunnel 8100 8100",
+    "app-list": "ideviceinstaller -l",
+    "wda-init": "cd WebDriverAgent && ./Scripts/bootstrap.sh",
+    "wda-clone": "git clone --depth=1 https://github.com/amateur-coder-union/WebDriverAgent.git",
+    "wda-update": "cd WebDriverAgent && git pull",
+    "updateDep": "yarn add git+https://github.com/flasco/cheat-core.git git+https://github.com/flasco/WDR.git git+https://github.com/flasco/logger.git",
     "screenshot": "node scripts/screenshot.js",
     "getScale": "node scripts/getScale.js"
   },
