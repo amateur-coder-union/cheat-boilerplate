@@ -62,7 +62,7 @@
     "@flasco/wda-driver": "git+https://github.com/flasco/WDR.git",
     "carlo": "^0.9.45",
     "node-notifier": "^5.4.0",
-    "opencv4nodejs": "^4.16.0"
+    "opencv4nodejs": "^4.17.0"
   },
   "jest": {
     "testEnvironment": "node",

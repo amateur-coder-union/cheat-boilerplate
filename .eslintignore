@@ -12,3 +12,4 @@ client/scripts
 /scripts
 client/config
 /WebDriverAgent
+/__test__

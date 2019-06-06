@@ -126,12 +126,12 @@
 
 "@flasco/cheat-core@git+https://github.com/flasco/cheat-core.git":
   version "0.2.1"
-  resolved "git+https://github.com/flasco/cheat-core.git#4ab96221f223cd568820cbd88b442b4f01eadbe8"
+  resolved "git+https://github.com/flasco/cheat-core.git#8ad40f58de4f306a19d63da1de5d43babd857108"
   dependencies:
     "@flasco/logger" "git+https://github.com/flasco/logger.git"
     colors-cli "^1.0.21"
     date-fns "^1.30.1"
-    opencv4nodejs "^4.16.0"
+    opencv4nodejs "^4.17.0"
 
 "@flasco/logger@git+https://github.com/flasco/logger.git":
   version "0.0.2"
@@ -142,9 +142,9 @@
 
 "@flasco/wda-driver@git+https://github.com/flasco/WDR.git":
   version "0.2.1"
-  resolved "git+https://github.com/flasco/WDR.git#93b826fb7f2417db37715f0a401350d3ed83b6f8"
+  resolved "git+https://github.com/flasco/WDR.git#0942de7f40212d2ef2cf74e44d8a002dd5961cfa"
   dependencies:
-    axios "^0.18.0"
+    axios "^0.19.0"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -483,13 +483,13 @@ aws4@^1.8.0:
   resolved "https://registry.npm.taobao.org/aws4/download/aws4-1.8.0.tgz#f0e003d9ca9e7f59c7a508945d7b2ef9a04a542f"
   integrity sha1-8OAD2cqef1nHpQiUXXsu+aBKVC8=
 
-axios@^0.18.0:
-  version "0.18.0"
-  resolved "https://registry.npm.taobao.org/axios/download/axios-0.18.0.tgz#32d53e4851efdc0a11993b6cd000789d70c05102"
-  integrity sha1-MtU+SFHv3AoRmTts0AB4nXDAUQI=
+axios@^0.19.0:
+  version "0.19.0"
+  resolved "https://registry.npm.taobao.org/axios/download/axios-0.19.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Faxios%2Fdownload%2Faxios-0.19.0.tgz#8e09bff3d9122e133f7b8101c8fbdd00ed3d2ab8"
+  integrity sha1-jgm/89kSLhM/e4EByPvdAO09Krg=
   dependencies:
-    follow-redirects "^1.3.0"
-    is-buffer "^1.1.5"
+    follow-redirects "1.5.10"
+    is-buffer "^2.0.2"
 
 babel-code-frame@^6.22.0:
   version "6.26.0"
@@ -1049,7 +1049,14 @@ debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.8, debug@^2.6.9:
   dependencies:
     ms "2.0.0"
 
-debug@^3.0.0, debug@^3.0.1, debug@^3.1.0, debug@^3.2.6:
+debug@=3.1.0:
+  version "3.1.0"
+  resolved "https://registry.npm.taobao.org/debug/download/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
+  integrity sha1-W7WgZyYotkFJVmuhaBnmFRjGcmE=
+  dependencies:
+    ms "2.0.0"
+
+debug@^3.0.0, debug@^3.0.1, debug@^3.1.0:
   version "3.2.6"
   resolved "https://registry.npm.taobao.org/debug/download/debug-3.2.6.tgz#e83d17de16d8a7efb7717edbe5fb10135eee629b"
   integrity sha1-6D0X3hbYp++3cX7b5fsQE17uYps=
@@ -1846,12 +1853,12 @@ flatted@^2.0.0:
   resolved "https://registry.npm.taobao.org/flatted/download/flatted-2.0.0.tgz#55122b6536ea496b4b44893ee2608141d10d9916"
   integrity sha1-VRIrZTbqSWtLRIk+4mCBQdENmRY=
 
-follow-redirects@^1.3.0:
-  version "1.7.0"
-  resolved "https://registry.npm.taobao.org/follow-redirects/download/follow-redirects-1.7.0.tgz#489ebc198dc0e7f64167bd23b03c4c19b5784c76"
-  integrity sha1-SJ68GY3A5/ZBZ70jsDxMGbV4THY=
+follow-redirects@1.5.10:
+  version "1.5.10"
+  resolved "https://registry.npm.taobao.org/follow-redirects/download/follow-redirects-1.5.10.tgz#7b7a9f9aea2fdff36786a94ff643ed07f4ff5e2a"
+  integrity sha1-e3qfmuov3/NnhqlP9kPtB/T/Xio=
   dependencies:
-    debug "^3.2.6"
+    debug "=3.1.0"
 
 for-in@^1.0.1, for-in@^1.0.2:
   version "1.0.2"
@@ -2465,7 +2472,7 @@ is-buffer@^1.1.4, is-buffer@^1.1.5:
   resolved "https://registry.npm.taobao.org/is-buffer/download/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
   integrity sha1-76ouqdqg16suoTqXsritUf776L4=
 
-is-buffer@^2.0.0:
+is-buffer@^2.0.0, is-buffer@^2.0.2:
   version "2.0.3"
   resolved "https://registry.npm.taobao.org/is-buffer/download/is-buffer-2.0.3.tgz#4ecf3fcf749cbd1e472689e109ac66261a25e725"
   integrity sha1-Ts8/z3ScvR5HJonhCaxmJhol5yU=
@@ -3160,13 +3167,6 @@ lru-cache@^4.0.1:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
 
-macro-inferno@^0.2.3:
-  version "0.2.3"
-  resolved "https://registry.npm.taobao.org/macro-inferno/download/macro-inferno-0.2.3.tgz#206e9698d006d9a4421cdfca240ef93c2cafc174"
-  integrity sha1-IG6WmNAG2aRCHN/KJA75PCyvwXQ=
-  dependencies:
-    nan "^2.12.1"
-
 make-dir@^1.0.0:
   version "1.3.0"
   resolved "https://registry.npm.taobao.org/make-dir/download/make-dir-1.3.0.tgz#79c1033b80515bd6d24ec9933e860ca75ee27f0c"
@@ -3402,7 +3402,7 @@ mute-stream@0.0.7:
   resolved "https://registry.npm.taobao.org/mute-stream/download/mute-stream-0.0.7.tgz#3075ce93bc21b8fab43e1bc4da7e8115ed1e7bab"
   integrity sha1-MHXOk7whuPq0PhvE2n6BFe0ee6s=
 
-nan@^2.12.1, nan@^2.13.2:
+nan@^2.13.2:
   version "2.13.2"
   resolved "https://registry.npm.taobao.org/nan/download/nan-2.13.2.tgz#f51dc7ae66ba7d5d55e1e6d4d8092e802c9aefe7"
   integrity sha1-9R3Hrma6fV1V4ebU2AkugCya7+c=
@@ -3424,10 +3424,10 @@ nanomatch@^1.2.9:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-native-node-utils@^0.1.6:
-  version "0.1.6"
-  resolved "https://registry.npm.taobao.org/native-node-utils/download/native-node-utils-0.1.6.tgz#0e77a2dea35a4e4096e4e3941db494301126ab13"
-  integrity sha1-Dnei3qNaTkCW5OOUHbSUMBEmqxM=
+native-node-utils@^0.1.7:
+  version "0.1.7"
+  resolved "https://registry.npm.taobao.org/native-node-utils/download/native-node-utils-0.1.7.tgz#9de38af402c74749be75b1fcb5eae0658a1db3a8"
+  integrity sha1-neOK9ALHR0m+dbH8tergZYods6g=
   dependencies:
     nan "^2.13.2"
 
@@ -3607,14 +3607,13 @@ opencv-build@^0.1.3:
     "@types/node" "^11.10.5"
     npmlog "^4.1.2"
 
-opencv4nodejs@^4.15.0, opencv4nodejs@^4.16.0:
-  version "4.16.0"
-  resolved "https://registry.npm.taobao.org/opencv4nodejs/download/opencv4nodejs-4.16.0.tgz#21fda13883476e777e9b2d9fe9c3c0329e15a319"
-  integrity sha1-If2hOINHbnd+my2f6cPAMp4Voxk=
+opencv4nodejs@^4.17.0:
+  version "4.17.0"
+  resolved "https://registry.npmjs.org/opencv4nodejs/-/opencv4nodejs-4.17.0.tgz#a11b4c64007c759d08e85a27df92cc962a2fa2fd"
+  integrity sha512-p5iKEX0N/VxpveGDeHNMJJwjWd5ggzSVgIqUKCCE8aUDgGIXdZWfZGHA37cS9y2hLVjkI3pvHMVwnm0W1me5Vw==
   dependencies:
-    macro-inferno "^0.2.3"
     nan "^2.13.2"
-    native-node-utils "^0.1.6"
+    native-node-utils "^0.1.7"
     opencv-build "^0.1.3"
   optionalDependencies:
     "@types/node" ">6"
