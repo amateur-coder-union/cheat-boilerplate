@@ -3,7 +3,7 @@ const {
   drag,
   tap,
   wait
-} = require('@flasco/cheat-core/src/utils/chainOperation');
+} = require('@flasco/cheat-core/dist/utils/chainOperation');
 
 const BaseGame = require('../base-game');
 const {

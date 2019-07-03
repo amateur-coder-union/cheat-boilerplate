@@ -124,14 +124,14 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@flasco/cheat-core@git+https://github.com/flasco/cheat-core.git":
-  version "0.2.1"
-  resolved "git+https://github.com/flasco/cheat-core.git#8ad40f58de4f306a19d63da1de5d43babd857108"
+"@flasco/cheat-core@git+https://github.com/flasco/cheat-core.git#feature/support-ts":
+  version "0.3.0"
+  resolved "git+https://github.com/flasco/cheat-core.git#2a46074cf8c64f9f1ffba4abd9ecd4547a979a2a"
   dependencies:
-    "@flasco/logger" "git+https://github.com/flasco/logger.git"
+    "@flasco/logger" "git+https://github.com/flasco/logger.git#feature/support-ts"
     colors-cli "^1.0.21"
     date-fns "^1.30.1"
-    opencv4nodejs "^4.17.0"
+    tslib "^1.10.0"
 
 "@flasco/logger@git+https://github.com/flasco/logger.git":
   version "0.0.2"
@@ -140,11 +140,20 @@
     colors-cli "^1.0.23"
     date-fns "^1.30.1"
 
-"@flasco/wda-driver@git+https://github.com/flasco/WDR.git":
+"@flasco/logger@git+https://github.com/flasco/logger.git#feature/support-ts":
+  version "0.0.3"
+  resolved "git+https://github.com/flasco/logger.git#26f37b8b996670a7579a62bb7c5a31e31bd5e7f9"
+  dependencies:
+    colors-cli "^1.0.23"
+    date-fns "^1.30.1"
+    tslib "^1.10.0"
+
+"@flasco/wda-driver@git+https://github.com/flasco/WDR.git#feature/support-ts":
   version "0.2.1"
-  resolved "git+https://github.com/flasco/WDR.git#0942de7f40212d2ef2cf74e44d8a002dd5961cfa"
+  resolved "git+https://github.com/flasco/WDR.git#f79ca142ebe90f8b3a0dd7fbb4221a75a323221d"
   dependencies:
     axios "^0.19.0"
+    tslib "^1.10.0"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -716,10 +725,10 @@ capture-stack-trace@^1.0.0:
   resolved "https://registry.npm.taobao.org/capture-stack-trace/download/capture-stack-trace-1.0.1.tgz#a6c0bbe1f38f3aa0b92238ecb6ff42c344d4135d"
   integrity sha1-psC74fOPOqC5Ijjstv9Cw0TUE10=
 
-carlo@^0.9.45:
-  version "0.9.45"
-  resolved "https://registry.npm.taobao.org/carlo/download/carlo-0.9.45.tgz#f26c3482a824717810dc2b3247310d9d9aca2ebf"
-  integrity sha1-8mw0gqgkcXgQ3CsyRzENnZrKLr8=
+carlo@^0.9.46:
+  version "0.9.46"
+  resolved "https://registry.npm.taobao.org/carlo/download/carlo-0.9.46.tgz#70d641c37584974adbf7a1e9bbec29b6bad84a4b"
+  integrity sha1-cNZBw3WEl0rb96Hpu+wptrrYSks=
   dependencies:
     debug "^4.1.0"
     puppeteer-core "~1.12.0"
@@ -3407,6 +3416,11 @@ nan@^2.13.2:
   resolved "https://registry.npm.taobao.org/nan/download/nan-2.13.2.tgz#f51dc7ae66ba7d5d55e1e6d4d8092e802c9aefe7"
   integrity sha1-9R3Hrma6fV1V4ebU2AkugCya7+c=
 
+nan@^2.14.0:
+  version "2.14.0"
+  resolved "https://registry.npm.taobao.org/nan/download/nan-2.14.0.tgz#7818f722027b2459a86f0295d434d1fc2336c52c"
+  integrity sha1-eBj3IgJ7JFmobwKV1DTR/CM2xSw=
+
 nanomatch@^1.2.9:
   version "1.2.13"
   resolved "https://registry.npm.taobao.org/nanomatch/download/nanomatch-1.2.13.tgz#b87a8aa4fc0de8fe6be88895b38983ff265bd119"
@@ -3424,10 +3438,10 @@ nanomatch@^1.2.9:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-native-node-utils@^0.1.7:
-  version "0.1.7"
-  resolved "https://registry.npm.taobao.org/native-node-utils/download/native-node-utils-0.1.7.tgz#9de38af402c74749be75b1fcb5eae0658a1db3a8"
-  integrity sha1-neOK9ALHR0m+dbH8tergZYods6g=
+native-node-utils@^0.2.7:
+  version "0.2.7"
+  resolved "https://registry.npm.taobao.org/native-node-utils/download/native-node-utils-0.2.7.tgz#dbf7fca4cfee579585d5e04d4564749bd56534a3"
+  integrity sha1-2/f8pM/uV5WF1eBNRWR0m9VlNKM=
   dependencies:
     nan "^2.13.2"
 
@@ -3599,22 +3613,22 @@ onetime@^2.0.0:
   dependencies:
     mimic-fn "^1.0.0"
 
-opencv-build@^0.1.3:
-  version "0.1.3"
-  resolved "https://registry.npm.taobao.org/opencv-build/download/opencv-build-0.1.3.tgz#059daf3b82e9d43b528d47e43bde0efe24ebb0cc"
-  integrity sha1-BZ2vO4Lp1DtSjUfkO94O/iTrsMw=
+opencv-build@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.npm.taobao.org/opencv-build/download/opencv-build-0.1.4.tgz#e5f4bab55c95d0824b55b048f4b608742bcac626"
+  integrity sha1-5fS6tVyV0IJLVbBI9LYIdCvKxiY=
   dependencies:
     "@types/node" "^11.10.5"
     npmlog "^4.1.2"
 
-opencv4nodejs@^4.17.0:
-  version "4.17.0"
-  resolved "https://registry.npmjs.org/opencv4nodejs/-/opencv4nodejs-4.17.0.tgz#a11b4c64007c759d08e85a27df92cc962a2fa2fd"
-  integrity sha512-p5iKEX0N/VxpveGDeHNMJJwjWd5ggzSVgIqUKCCE8aUDgGIXdZWfZGHA37cS9y2hLVjkI3pvHMVwnm0W1me5Vw==
+opencv4nodejs@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.npm.taobao.org/opencv4nodejs/download/opencv4nodejs-5.1.0.tgz#f5a49646da95dc5531d57d58fb61a7312264cdb3"
+  integrity sha1-9aSWRtqV3FUx1X1Y+2GnMSJkzbM=
   dependencies:
-    nan "^2.13.2"
-    native-node-utils "^0.1.7"
-    opencv-build "^0.1.3"
+    nan "^2.14.0"
+    native-node-utils "^0.2.7"
+    opencv-build "^0.1.4"
   optionalDependencies:
     "@types/node" ">6"
 
@@ -5387,6 +5401,11 @@ trough@^1.0.0:
   version "1.0.3"
   resolved "https://registry.npm.taobao.org/trough/download/trough-1.0.3.tgz#e29bd1614c6458d44869fc28b255ab7857ef7c24"
   integrity sha1-4pvRYUxkWNRIafwoslWreFfvfCQ=
+
+tslib@^1.10.0:
+  version "1.10.0"
+  resolved "https://registry.npm.taobao.org/tslib/download/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
+  integrity sha1-w8GflZc/sKYpc/sJ2Q2WHuQ+XIo=
 
 tslib@^1.9.0:
   version "1.9.3"

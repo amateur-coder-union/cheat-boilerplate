@@ -1,5 +1,5 @@
 const { Judge, delay } = require('@flasco/cheat-core');
-const BaseGame = require('@flasco/cheat-core/src/core/base-game');
+const BaseGame = require('@flasco/cheat-core/dist/core/base-game');
 
 class GameBase extends BaseGame {
   constructor(props) {
