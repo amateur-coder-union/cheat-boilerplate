@@ -58,8 +58,8 @@
     "stylelint-processor-styled-components": "^1.6.0"
   },
   "dependencies": {
-    "@flasco/cheat-core": "git+https://github.com/flasco/cheat-core.git#feature/support-ts",
-    "@flasco/wda-driver": "git+https://github.com/flasco/WDR.git#feature/support-ts",
+    "@flasco/cheat-core": "git+https://github.com/flasco/cheat-core.git",
+    "@flasco/wda-driver": "git+https://github.com/flasco/wda-driver.git",
     "carlo": "^0.9.46",
     "node-notifier": "^5.4.0",
     "opencv4nodejs": "^5.1.0"

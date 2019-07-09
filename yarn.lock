@@ -124,6 +124,15 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@flasco/cheat-core@git+https://github.com/flasco/cheat-core.git":
+  version "0.5.2"
+  resolved "git+https://github.com/flasco/cheat-core.git#0351ef08796d1e1a8e4dc35648e7482360fcdf05"
+  dependencies:
+    "@flasco/logger" "git+https://github.com/flasco/logger.git"
+    colors-cli "^1.0.21"
+    date-fns "^1.30.1"
+    tslib "^1.10.0"
+
 "@flasco/cheat-core@git+https://github.com/flasco/cheat-core.git#feature/support-ts":
   version "0.3.0"
   resolved "git+https://github.com/flasco/cheat-core.git#2a46074cf8c64f9f1ffba4abd9ecd4547a979a2a"
@@ -151,6 +160,13 @@
 "@flasco/wda-driver@git+https://github.com/flasco/WDR.git#feature/support-ts":
   version "0.2.1"
   resolved "git+https://github.com/flasco/WDR.git#f79ca142ebe90f8b3a0dd7fbb4221a75a323221d"
+  dependencies:
+    axios "^0.19.0"
+    tslib "^1.10.0"
+
+"@flasco/wda-driver@git+https://github.com/flasco/wda-driver.git":
+  version "0.3.1"
+  resolved "git+https://github.com/flasco/wda-driver.git#3d0e8e05ac331959a41a420559fccce8be020591"
   dependencies:
     axios "^0.19.0"
     tslib "^1.10.0"
